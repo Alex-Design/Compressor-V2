@@ -6,7 +6,7 @@ Alternatively, you may compress at a later point by using the compressFile metho
 ## Usage
 
 * 1: Clone or download this project into your own project or framework, however you wish. 
-(More detailed instructions including Composer will follow soon)
+(More detailed instructions including Composer will follow soon, once packagist is sorted out for this repository)
 
 
 
@@ -16,10 +16,10 @@ require_once('compressor.php');
 
 $compressor = new Compressor('testingFile.txt', 'outputTest', true);
 ```
-where 'compressor.php' also contains the location of the compressor code if required (such as if it is within a subdirectory)
+where 'compressor.php' also contains the location of the compressor code if required (such as if it is within a subdirectory).
 However, much of this can be avoided with the usage of use statements, which this documentation (and file) will be updated for, very soon.
 
-For now, an example is in the compressorTest.php file.
+For now, an example using require_once is in the compressorTest.php file.
 
 
 
@@ -30,7 +30,7 @@ $compressor = new Compressor('$inputFileName (including extensions)', '$fileOutp
 
 
 
-* 4: If you do not wish to compress any file as soon as you instantiate the compressor - fear not! Simply call the method:
+* 4: If you do not wish to compress any file as soon as you instantiate the compressor - fear not! Simply leave the original constructor's arguments blank and instead call the method:
 ```
 $compressor->compressFile($inputFileName (including extensions), $outputFileName (including extensions));
 ```
